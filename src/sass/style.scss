@@ -1,0 +1,27 @@
+@use 'base/animations';
+@use 'utils/reset';
+@use 'blocks/promo';
+@use 'blocks/header';
+@use 'blocks/buttons';
+@use 'blocks/features';
+@use 'blocks/consultation';
+@use 'blocks/forms';
+@use 'blocks/carousel';
+@use 'blocks/catalog';
+@use 'blocks/reviews';
+@use 'blocks/footer';
+@use 'blocks/modal';
+@use 'blocks/pageup';
+
+
+.container {
+  position: relative;
+  max-width: 950px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 578px) {
+  .container {
+    max-width: 576px;
+  }
+}

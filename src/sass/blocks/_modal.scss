@@ -1,0 +1,249 @@
+// .overlay {
+//   display: none;
+//   position: fixed;
+//   width: 100%;
+//   height: 100%;
+//   top: 0;
+//   background-color: rgba(0, 0, 0, 0.56);
+// }
+
+// .modal {
+//   display: none;
+//   position: absolute;
+//   top: 50%;
+//   left: 50%;
+//   transform: translate(-50%, -50%);
+//   background-color: #f2f2f2;
+//   width: 380px;
+//   min-height: 400px;
+//   padding: 38px 37px 40px 40px;
+
+//   &__close {
+//     position: absolute;
+//     top: 0;
+//     right: -40px;
+//     font-size: 40px;
+//     color: red;
+//     line-height: 21px;
+//     cursor: pointer;
+//   }
+
+//   &__subtitle {
+//     font-weight: 700;
+//     font-size: 19px;
+//     line-height: 100%;
+//     text-align: center;
+//     color: #0d0d0d;
+//   }
+
+//   &__descr {
+//     margin-top: 10px;
+//     font-weight: 700;
+//     font-size: 14px;
+//     line-height: 100%;
+//     text-align: center;
+//     color: #0d0d0d;
+//   }
+//   &_mini {
+//     min-height: 140px;
+//   }
+// }
+
+// .overlay {
+//   //   display: none;
+//   position: fixed;
+//   width: 100%;
+//   height: 100%;
+//   top: 0;
+//   left: 0;
+//   background-color: rgba(0, 0, 0, 0.56);
+//   opacity: 0;
+//   visibility: hidden;
+//   transition: opacity 0.3s ease, visibility 0.3s ease;
+// }
+
+// /* Активный класс для затемнения фона */
+// .overlay_active {
+//   display: block;
+//   opacity: 1;
+//   visibility: visible;
+// }
+
+// .modal {
+//   //   display: none;
+//   position: fixed;
+//   top: 50%;
+//   left: 50%;
+//   transform: translate(-50%, -50%);
+//   background-color: #f2f2f2;
+//   width: 380px;
+//   min-height: 400px;
+//   padding: 38px 37px 40px 40px;
+//   opacity: 0;
+//   visibility: hidden;
+//   transition: opacity 0.3s ease, visibility 0.3s ease;
+//   border-radius: 10px; /* Добавим плавные углы */
+//   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+// }
+
+// /* Активный класс для показа модального окна */
+// .modal.active {
+//   display: block;
+//   opacity: 1;
+//   visibility: visible;
+// }
+
+// /* Кнопка закрытия */
+// .modal__close {
+//   position: absolute;
+//   top: 10px;
+//   right: 10px;
+//   font-size: 24px;
+//   color: red;
+//   cursor: pointer;
+//   transition: color 0.3s ease;
+// }
+
+// .modal__close:hover {
+//   color: darkred;
+// }
+
+// /* Заголовки в модалке */
+// .modal__subtitle {
+//   font-weight: 700;
+//   font-size: 19px;
+//   text-align: center;
+//   color: #0d0d0d;
+// }
+
+// .modal__descr {
+//   margin-top: 10px;
+//   font-weight: 700;
+//   font-size: 14px;
+//   text-align: center;
+//   color: #0d0d0d;
+// }
+
+// /* Мини-модалка */
+// .modal_mini {
+//   min-height: 140px;
+//   width: 300px;
+// }
+
+// /* 📱 Адаптивность для мобилок */
+// @media (max-width: 480px) {
+//   .modal {
+//     width: 90%;
+//     min-height: auto;
+//     padding: 20px;
+//   }
+
+//   .modal_mini {
+//     width: 80%;
+//   }
+
+//   .modal__close {
+//     right: 5px;
+//     top: 5px;
+//     font-size: 20px;
+//   }
+// }
+
+.overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.56);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* Активный класс для overlay */
+.overlay_active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #f2f2f2;
+  width: 380px;
+  min-height: 400px;
+  padding: 38px 37px 40px 40px;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  border-radius: 10px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.modal_active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
+}
+
+/* Кнопка закрытия */
+.modal__close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  color: red;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.modal__close:hover {
+  color: darkred;
+}
+
+/* Заголовки в модалке */
+.modal__subtitle {
+  font-weight: 700;
+  font-size: 19px;
+  text-align: center;
+  color: #0d0d0d;
+}
+
+.modal__descr {
+  margin-top: 10px;
+  font-weight: 700;
+  font-size: 14px;
+  text-align: center;
+  color: #0d0d0d;
+}
+
+/* Мини-модалка */
+.modal_mini {
+  min-height: 140px;
+  width: 300px;
+}
+
+/* 📱 Адаптивность для мобилок */
+@media (max-width: 480px) {
+  .modal {
+    width: 90%;
+    min-height: auto;
+    padding: 20px;
+  }
+
+  .modal_mini {
+    width: 80%;
+  }
+
+  .modal__close {
+    right: 5px;
+    top: 5px;
+    font-size: 20px;
+  }
+}

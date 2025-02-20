@@ -1,0 +1,73 @@
+.button {
+  width: 150px;
+  height: 30px;
+  font-weight: 500;
+  font-size: 12px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+  background-color: #c70101;
+  border: none;
+  border-radius: 5px;
+  padding: 0;
+  margin-top: 5px;
+  &_main {
+    margin-top: 67px;
+    width: 300px;
+    height: 50px;
+    font-size: 16px;
+  }
+  &_submit {
+    margin-top: 0;
+    width: 100%;
+    height: 55px;
+    font-size: 16px;
+    color: #fff;
+  }
+  &_mini {
+    margin: 0;
+    font-size: 14px;
+    width: 131px;
+    height: 40px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .button {
+    &_main {
+      width: 280px;
+      height: 50px;
+      font-size: 16px;
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .button {
+    height: auto;
+    width: 100%;
+    max-width: 150px;
+    font-size: 12px;
+    padding: 10px 15px;
+    white-space: normal;
+    text-align: center;
+    white-space: normal;
+    line-height: 1.2;
+    word-break: break-word;
+
+    &_main {
+      width: 100%;
+      max-width: 240px;
+      height: auto;
+      font-size: 14px;
+    }
+
+    &_submit {
+      width: 100%;
+      max-width: 220px;
+      font-size: 12px;
+      word-break: break-word;
+      line-height: 1.2;
+    }
+  }
+}

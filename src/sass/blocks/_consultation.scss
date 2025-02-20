@@ -1,0 +1,59 @@
+.consultation {
+  height: auto;
+  padding: 100px 0 90px 0;
+  background: url('../img/bg2.jpg') no-repeat center center / cover;
+
+  &__title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.5;
+    text-transform: uppercase;
+    color: #fff;
+  }
+
+  &__subtitle {
+    margin-top: 8px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 150%;
+    color: #fff;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .consultation {
+    // padding-left: 20px;
+    // padding-right: 20px;
+    padding: 80px 20px 60px 20px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .consultation {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    &__title {
+      font-size: 29px;
+    }
+
+    &__subtitle {
+      font-size: 18px;
+    }
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .consultation {
+    padding: 60px 10px 40px;
+    &__title {
+      font-size: 20px;
+      word-wrap: break-word;
+      width: 100%;
+      max-width: 90%;
+      overflow-wrap: break-word;
+      overflow: hidden;
+    }
+    &__subtitle {
+      font-size: 16px;
+    }
+  }
+}
