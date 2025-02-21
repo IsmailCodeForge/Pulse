@@ -20,7 +20,7 @@ Pulse is a landing page offering personalized consultation for selecting heart r
 ## How to Run
 1. Clone the repository:
    ```sh
-   git clone https://github.com/your-username/pulse.git
+   git clone https://github.com/IsmailCodeForge/Pulse
    ```
 2. Open `index.html` in your browser.
 

@@ -71,18 +71,17 @@ document.addEventListener('DOMContentLoaded', function () {
 })
 
 document.addEventListener('DOMContentLoaded', function () {
-  const modalButtons = document.querySelectorAll('[data-modal]') // Находим кнопки с data-modal
-  const overlay = document.querySelector('.overlay') // Затемняющий фон
-  const modals = document.querySelectorAll('.modal') // Все модалки
-  const closeButtons = document.querySelectorAll('.modal__close') // Кнопки закрытия
+  const modalButtons = document.querySelectorAll('[data-modal]') 
+  const overlay = document.querySelector('.overlay') 
+  const modals = document.querySelectorAll('.modal')
+  const closeButtons = document.querySelectorAll('.modal__close') 
 
-  if (!modalButtons.length || !overlay || !modals.length) return // Проверяем, что всё найдено
+  if (!modalButtons.length || !overlay || !modals.length) return
 
-  // Функция для открытия модального окна
   function openModal(modal) {
     overlay.classList.add('overlay_active')
     modal.classList.add('modal_active')
-    document.body.style.overflow = 'hidden' // Блокируем прокрутку
+    document.body.style.overflow = 'hidden' 
   }
 
   // Функция для закрытия всех модалок
@@ -119,25 +118,25 @@ document.addEventListener('DOMContentLoaded', function () {
 })
 
 document.addEventListener('DOMContentLoaded', function () {
-  const miniButtons = document.querySelectorAll('.button_mini') // Кнопки "КУПИТЬ"
-  const modalOrder = document.querySelector('#order') // Модальное окно "order"
-  const overlay = document.querySelector('.overlay') // Затемняющий фон
-  const closeButtons = document.querySelectorAll('.modal__close') // Кнопки закрытия
+  const miniButtons = document.querySelectorAll('.button_mini') 
+  const modalOrder = document.querySelector('#order')
+  const overlay = document.querySelector('.overlay')
+  const closeButtons = document.querySelectorAll('.modal__close')
 
-  if (!miniButtons.length || !modalOrder || !overlay) return // Проверяем, что элементы существуют
+  if (!miniButtons.length || !modalOrder || !overlay) return 
 
   // Функция для открытия модального окна
   function openModal(modal) {
-    overlay.classList.add('overlay_active') // Добавляем активный класс
+    overlay.classList.add('overlay_active') 
     modal.classList.add('modal_active')
-    document.body.style.overflow = 'hidden' // Блокируем прокрутку
+    document.body.style.overflow = 'hidden'
   }
 
   // Функция для закрытия всех модалок
   function closeModal() {
     overlay.classList.remove('overlay_active')
     modalOrder.classList.remove('modal_active')
-    document.body.style.overflow = '' // Разблокируем прокрутку
+    document.body.style.overflow = ''
   }
 
   // Обработчик клика на кнопки "КУПИТЬ"
@@ -169,9 +168,9 @@ document.addEventListener('DOMContentLoaded', function () {
     })
 
     input.addEventListener('input', function (e) {
-      let value = input.value.replace(/\D/g, '') // Убираем все не-цифры
+      let value = input.value.replace(/\D/g, '') 
       if (!value.startsWith('41')) {
-        value = '41' // Начало всегда с 41
+        value = '41' 
       }
 
       // Форматируем номер с пробелами
@@ -194,7 +193,7 @@ document.addEventListener('DOMContentLoaded', function () {
         input.selectionStart <= 4 &&
         (e.key === 'Backspace' || e.key === 'Delete')
       ) {
-        e.preventDefault() // Запрещаем удалять `+41`
+        e.preventDefault() 
       }
     })
   })
